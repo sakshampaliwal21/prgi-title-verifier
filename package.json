@@ -1,0 +1,22 @@
+{
+  "name": "prgi-title-verifier",
+  "version": "1.0.0",
+  "description": "A terminal-based system that checks new title submissions for similarity , duplicate names, restricted words, and other verification rules with a final verification probability score.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakshampaliwal21/prgi-title-verifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sakshampaliwal21/prgi-title-verifier/issues"
+  },
+  "homepage": "https://github.com/sakshampaliwal21/prgi-title-verifier#readme"
+}
