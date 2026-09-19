@@ -1,0 +1,20 @@
+[
+  {
+    "title": "India Todai",
+    "similarTitle": "India Today",
+    "similarity": 91,
+    "probability": 9,
+    "status": "REJECTED",
+    "reasons": [
+      "Title is highly similar to an existing title"
+    ]
+  },
+  {
+    "title": "Green Future Media",
+    "similarTitle": "Business India",
+    "similarity": 28,
+    "probability": 72,
+    "status": "APPROVED",
+    "reasons": []
+  }
+]
