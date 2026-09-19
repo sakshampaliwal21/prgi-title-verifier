@@ -1,0 +1,19 @@
+PRGI TITLE VERIFICATION REPORT
+====================================
+
+Application 1
+Title: India Todai
+Similar Title: India Today
+Similarity: 91%
+Verification Probability: 9%
+Status: REJECTED
+Reasons: Title is highly similar to an existing title
+------------------------------------
+Application 2
+Title: Green Future Media
+Similar Title: Business India
+Similarity: 28%
+Verification Probability: 72%
+Status: APPROVED
+Reasons: None
+------------------------------------

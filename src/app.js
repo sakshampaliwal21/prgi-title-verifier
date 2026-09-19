@@ -1,4 +1,5 @@
 const readline=require("readline");
+const fs=require("fs");
 const {searchTitles,saveApplication,getApplications}=require("./database");
 const {verifyTitle}=require("./verifier");
 
@@ -91,6 +92,20 @@ showMenu();
 });
 }
 
+function showRules(){
+console.log("\nVERIFICATION RULES");
+console.log("------------------------------------");
+console.log("1. Check similarity with existing titles.");
+console.log("2. Check for disallowed words.");
+console.log("3. Check periodicity words.");
+console.log("4. Check common prefixes and suffixes.");
+console.log("5. Highly similar titles may be rejected.");
+console.log("6. Verification probability is based on similarity.");
+console.log("------------------------------------\n");
+
+showMenu();
+}
+
 function showStatistics(){
 const applications=getApplications();
 let approved=0;
@@ -123,6 +138,43 @@ console.log("------------------------------------\n");
 showMenu();
 }
 
+function exportReport(){
+const applications=getApplications();
+
+if(applications.length===0){
+console.log("\nNo applications available to export.\n");
+showMenu();
+return;
+}
+
+let report="PRGI TITLE VERIFICATION REPORT\n";
+report+="====================================\n\n";
+
+for(let i=0;i<applications.length;i++){
+const application=applications[i];
+
+report+="Application "+(i+1)+"\n";
+report+="Title: "+application.title+"\n";
+report+="Similar Title: "+application.similarTitle+"\n";
+report+="Similarity: "+application.similarity+"%\n";
+report+="Verification Probability: "+application.probability+"%\n";
+report+="Status: "+application.status+"\n";
+report+="Reasons: "+(application.reasons.length>0?application.reasons.join(", "):"None")+"\n";
+report+="------------------------------------\n";
+}
+
+if(!fs.existsSync("reports")){
+fs.mkdirSync("reports");
+}
+
+fs.writeFileSync("reports/verification-report.txt",report);
+
+console.log("\nReport exported successfully.");
+console.log("File: reports/verification-report.txt\n");
+
+showMenu();
+}
+
 function handleChoice(choice){
 if(choice==="1"){
 verifyNewTitle();
@@ -130,8 +182,12 @@ verifyNewTitle();
 showApplications();
 }else if(choice==="3"){
 searchExistingTitle();
+}else if(choice==="4"){
+showRules();
 }else if(choice==="5"){
 showStatistics();
+}else if(choice==="6"){
+exportReport();
 }else if(choice==="7"){
 console.log("\nThank you for using PRGI Title Verification System.");
 rl.close();
