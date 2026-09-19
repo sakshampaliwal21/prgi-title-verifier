@@ -16,5 +16,36 @@
     "probability": 72,
     "status": "APPROVED",
     "reasons": []
+  },
+  {
+    "title": "India Today",
+    "similarTitle": "India Today",
+    "similarity": 100,
+    "probability": 0,
+    "status": "REJECTED",
+    "reasons": [
+      "Title is highly similar to an existing title",
+      "Uses a common suffix: today"
+    ]
+  },
+  {
+    "title": "India Todai",
+    "similarTitle": "India Today",
+    "similarity": 91,
+    "probability": 9,
+    "status": "REJECTED",
+    "reasons": [
+      "Title is highly similar to an existing title"
+    ]
+  },
+  {
+    "title": "Delhi Police",
+    "similarTitle": "Delhi Times",
+    "similarity": 58,
+    "probability": 42,
+    "status": "REJECTED",
+    "reasons": [
+      "Contains disallowed word: police"
+    ]
   }
 ]
