@@ -22,8 +22,10 @@ console.log(`
 6. Export Verification Report
 7. Exit
 `);
-
-rl.question("Enter choice: ",handleChoice);
+rl.question("Enter choice: ",choice=>{
+choice=choice.trim();
+handleChoice(choice);
+});
 }
 
 function verifyNewTitle(){
@@ -102,7 +104,6 @@ console.log("4. Check common prefixes and suffixes.");
 console.log("5. Highly similar titles may be rejected.");
 console.log("6. Verification probability is based on similarity.");
 console.log("------------------------------------\n");
-
 showMenu();
 }
 
@@ -134,7 +135,6 @@ console.log("Approved:",approved);
 console.log("Rejected:",rejected);
 console.log("Average Similarity:",average+"%");
 console.log("------------------------------------\n");
-
 showMenu();
 }
 
@@ -171,7 +171,6 @@ fs.writeFileSync("reports/verification-report.txt",report);
 
 console.log("\nReport exported successfully.");
 console.log("File: reports/verification-report.txt\n");
-
 showMenu();
 }
 
