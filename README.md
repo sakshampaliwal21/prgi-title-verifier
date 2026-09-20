@@ -1,7 +1,6 @@
 # PRGI Title Verification System
 
 A terminal-based tool designed to **automatically verify new publication titles** by comparing them with existing titles and checking verification rules.
-
 Built with **Node.js**, JavaScript, and JSON data storage.
 
 # Features
@@ -86,7 +85,3 @@ npm start
 * Node.js
 * JSON
 * Git & GitHub
-
-# Disclaimer
-
-This is a **college project prototype** and is not an official PRGI system.
