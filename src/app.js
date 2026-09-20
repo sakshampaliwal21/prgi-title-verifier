@@ -7,7 +7,6 @@ const rl=readline.createInterface({
 input:process.stdin,
 output:process.stdout
 });
-
 function showMenu(){
 console.log(`
 ====================================
@@ -121,9 +120,7 @@ rejected++;
 }
 totalSimilarity+=application.similarity;
 }
-
 let average=0;
-
 if(applications.length>0){
 average=Math.round(totalSimilarity/applications.length);
 }
