@@ -60,7 +60,6 @@ Install dependencies:
 ```bash
 npm install
 ```
-
 Start the application:
 
 ```bash
@@ -78,10 +77,3 @@ npm start
 6. Export Verification Report
 7. Exit
 ```
-
-# Technology
-
-* JavaScript
-* Node.js
-* JSON
-* Git & GitHub
